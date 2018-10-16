@@ -1,0 +1,12 @@
+---
+applications:
+  - name: rabbitmq-tutorials
+    memory: 1GB
+    instances: 1
+    path: target/rabbitmq-tutorial-1.0-SNAPSHOT.jar
+    buildpack: java_buildpack    
+    stack: cflinuxfs2
+    no-route: true    
+    health-check-type: process
+    services:
+    - sperez-rmq
